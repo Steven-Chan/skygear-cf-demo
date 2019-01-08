@@ -1,0 +1,40 @@
+version: "1"
+provider:
+  name: skygear
+  app: demo-app
+
+services:
+  js-demo:
+    type: http-handler
+    env: node
+    src: examples/js-demo
+    secrets:
+      - DATABASE_URL
+    permission:
+      - key_required
+      - user_required
+
+  # I just copy the folder from openfaas template
+  docker-demo:
+    type: http-handler
+    env: docker
+    src:
+      context: exmaples/docker-demo
+
+  docker-image-demo:
+    type: http-handler
+    env: docker
+    src:
+      image: some-image:latest
+
+  js-fn-demo:
+    type: function
+    env: node
+    src: examples/js-fn-demo
+
+  # TODO:
+  flask-demo:
+    type: http-service
+    env: docker
+    src:
+      context: examples/flask-demo
