@@ -5,7 +5,7 @@
 ```
 - examples
   - docker-demo # I just copied it from an openfaas template
-  - flask-demo # TODO
+  - flask-demo
   - js-demo
   - js-fn-demo
 - skycf.yaml
