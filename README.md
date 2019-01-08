@@ -4,10 +4,10 @@
 
 ```
 - examples
-  - docker-demo # I just copied it from an openfaas template
-  - flask-demo
-  - js-demo
-  - js-fn-demo
+  - docker # I just copied it from an openfaas template
+  - flask
+  - js
+  - js-fn
 - skycf.yaml
 ```
 

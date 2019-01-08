@@ -7,7 +7,7 @@ services:
   js-demo:
     type: http-handler
     env: node
-    src: examples/js-demo
+    src: examples/js
     secrets:
       - DATABASE_URL
     permission:
@@ -19,7 +19,7 @@ services:
     type: http-handler
     env: docker
     src:
-      context: exmaples/docker-demo
+      context: exmaples/docker
 
   docker-image-demo:
     type: http-handler
@@ -30,11 +30,11 @@ services:
   js-fn-demo:
     type: function
     env: node
-    src: examples/js-fn-demo
+    src: examples/js-fn
 
   # TODO:
   flask-demo:
     type: http-service
     env: docker
     src:
-      context: examples/flask-demo
+      context: examples/flask
